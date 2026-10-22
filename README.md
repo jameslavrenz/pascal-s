@@ -2,6 +2,14 @@
 
 An interpreter for [Pascal-S](https://standardpascal.org/pascals.html), the educational subset of Pascal defined by Niklaus Wirth (1975). Pascal-S includes integer, real, boolean, and char types; arrays and records; procedures and functions; and structured control flow (`if`, `while`, `repeat`, `for`, `case`).
 
+## Engineering Highlights
+
+- **Interpreter workflow:** Go-based Pascal-S source runner and interactive REPL, with distinct parser and runtime packages ([entry point](cmd/pascal-s/main.go), [running programs](#run-a-pas-file), [REPL](#repl)).
+- **Language coverage:** Typed variables and constants, arrays/records, procedures/functions, and structured control flow (`if`, `while`, `repeat`, `for`, `case`) ([supported features](#pascal-s-features-supported)).
+- **Executable examples:** Checked-in Pascal programs illustrate standard I/O, arithmetic, functions, recursion, arrays, and control-flow paths ([sample program](#example-program), [test programs](testdata/)).
+- **Testability:** `make test` invokes `go test ./...`; the README documents the categories covered by the test suite, without claiming unmeasured coverage percentages ([tests](#test-suite), [Makefile](Makefile)).
+- **Scope boundaries:** Focuses on Wirth's educational Pascal-S subset, not full Pascal; sets, pointers, `goto`, `with`, and other excluded constructs are identified explicitly ([feature matrix](#pascal-s-features-supported)).
+
 ## Build
 
 ```bash
